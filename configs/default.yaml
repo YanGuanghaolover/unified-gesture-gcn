@@ -1,0 +1,30 @@
+# Unified Static + Dynamic Hand Gesture Recognition (Plan A)
+experiment_name: "unified_gesture_demo"
+seed: 42
+device: "auto" # "auto" | "cpu" | "cuda"
+
+data:
+  skeleton_type: "mediapipe_21" # "mediapipe_21" | "shrec_22"
+  seq_len: 32
+  use_bone_fusion: true
+  norm_scale_floor: 0.05
+  num_samples_per_class: 32
+  val_ratio: 0.25
+  batch_size: 16
+
+model:
+  num_classes: 6 # 3 static + 3 dynamic in synthetic demo
+  channels: [64, 64, 64, 128]
+  num_groups: 4
+  use_aru: true
+  use_dru: true
+  use_dre: true
+  use_mstcn: true
+  mstcn_dilations: [1, 2, 3, 4]
+  dropout: 0.1
+
+train:
+  epochs: 12
+  lr: 0.003
+  weight_decay: 0.0005
+  log_interval: 2

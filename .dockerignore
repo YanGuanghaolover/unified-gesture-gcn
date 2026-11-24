@@ -1,0 +1,14 @@
+.git/
+.github/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+*.zip
+*.tar.gz
+/checkpoints/
+/data/
+src/gesture_gcn/web/static/mediapipe/
+tests/

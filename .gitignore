@@ -1,0 +1,22 @@
+# Python / Packaging
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Runtime artifacts, checkpoints & user-recorded datasets (root-level only)
+/checkpoints/
+/data/
+
+# Downloaded MediaPipe static assets (fetched via scripts/download_assets.py)
+src/gesture_gcn/web/static/mediapipe/
